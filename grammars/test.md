@@ -1,9 +1,21 @@
-# test
+# Header 1
 
-Text
+## Header 2
 
-*italic*
+Normal text
 
-**bold**
+**test bold** *test italic* `test raw`
 
-`source`
+- test bullet
+
+```julia
+x = 3
+
+function foo() #src
+    "bar"
+end
+```
+
+<!-- #nb # *Notebook*  only filter
+#md # *markdown*  only filter
+#jl # *script*  only filter -->
