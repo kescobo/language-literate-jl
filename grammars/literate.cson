@@ -1,0 +1,36 @@
+scopeName: 'source.literate'
+name: 'language-literate'
+fileTypes: [
+  'lit'
+]
+patterns: [
+  {
+    comment: 'Lines rendered as markdown'
+    begin: '^((#(nb|md|jl) )?# )'
+    captures:
+      2: name: 'source.filter.literate'
+    end: '^[^#]'
+    patterns: [
+      {include: 'source.gfm'}
+    ]
+  }
+  {
+    comment: 'source filter'
+    match: '^[^#].+(#src)$'
+    captures:
+      1: name: 'source.filter.literate'
+  }
+  {
+    'include': 'source.julia'
+  }
+]
+repository:
+  ruleName:
+    {
+      name: ''
+      match: ''
+      end: ''
+      endCaptures:
+        0:
+          name: ''
+    }

@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle language-literate-jl",
+        "command": "language-literate-jl:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "language-literate-jl",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "language-literate-jl:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
