@@ -11,6 +11,90 @@ patterns: [
       2: name: 'source.filter.literate'
     end: '^[^#]'
     patterns: [
+      {
+        'begin': '^((#(nb|md|jl) )?# )(#{6})(\\s*)'
+        'end': '$'
+        'name': 'markup.heading.heading-6.gfm'
+        'captures':
+          '2': 'name': 'source.filter.literate'
+          '4': 'name': 'markup.heading.marker.gfm'
+          '5': 'name': 'markup.heading.space.gfm'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+      {
+        'begin': '^((#(nb|md|jl) )?# )(#{5})(\\s*)'
+        'end': '$'
+        'name': 'markup.heading.heading-5.gfm'
+        'captures':
+          '2': 'name': 'source.filter.literate'
+          '4': 'name': 'markup.heading.marker.gfm'
+          '5': 'name': 'markup.heading.space.gfm'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+      {
+        'begin': '^((#(nb|md|jl) )?# )(#{4})(\\s*)'
+        'end': '$'
+        'name': 'markup.heading.heading-4.gfm'
+        'captures':
+          '2': 'name': 'source.filter.literate'
+          '4': 'name': 'markup.heading.marker.gfm'
+          '5': 'name': 'markup.heading.space.gfm'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+      {
+        'begin': '^((#(nb|md|jl) )?# )(#{3})(\\s*)'
+        'end': '$'
+        'name': 'markup.heading.heading-3.gfm'
+        'captures':
+          '2': 'name': 'source.filter.literate'
+          '4': 'name': 'markup.heading.marker.gfm'
+          '5': 'name': 'markup.heading.space.gfm'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+      {
+        'begin': '^((#(nb|md|jl) )?# )(#{2})(\\s*)'
+        'end': '$'
+        'name': 'markup.heading.heading-2.gfm'
+        'captures':
+          '2': 'name': 'source.filter.literate'
+          '4': 'name': 'markup.heading.marker.gfm'
+          '5': 'name': 'markup.heading.space.gfm'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
+      {
+        'begin': '^((#(nb|md|jl) )?# )(#{1})(\\s*)'
+        'end': '$'
+        'name': 'markup.heading.heading-1.gfm'
+        'captures':
+          '2': 'name': 'source.filter.literate'
+          '4': 'name': 'markup.heading.marker.gfm'
+          '5': 'name': 'markup.heading.space.gfm'
+        'patterns': [
+          {
+            'include': '$self'
+          }
+        ]
+      }
       {include: 'source.gfm'}
     ]
   }
